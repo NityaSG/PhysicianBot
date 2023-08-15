@@ -40,13 +40,12 @@ export default function Home() {
       <input className='text-black px-2 py-1' onChange={e => setQuery(e.target.value)} />
       <button className="px-7 py-1 rounded-2xl bg-white text-black mt-2 mb-2" onClick={sendQuery}>Ask AI</button>
       {
-        loading && <p>Asking AI ...</p>
+        loading && <p className="text-center shadow-md bg-white bg-opacity-50">Asking AI ...</p>
       }
       {
-        result && <p>{result}</p>
+        result && <p className="text-center shadow-md bg-white bg-opacity-10 rounded-lg  border-opacity-10">{result}</p>
       }
-      { /* consider removing this button from the UI once the embeddings are created ... */}
-      <button onClick={createIndexAndEmbeddings}>Create index and embeddings</button>
+     
     </main>
   )
 }
